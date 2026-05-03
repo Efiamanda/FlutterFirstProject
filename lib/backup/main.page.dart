@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:first_project/lib/checkbox/dashboard.dart';
-import 'package:first_project/lib/checkbox/profile.dart';
-import 'package:first_project/lib/checkbox/listpage.dart';
+import 'package:first_project/page/beranda_page.dart';
+import 'package:first_project/page/profile_page.dart';
+import 'package:first_project/page/List_page.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 void main() {
@@ -18,11 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [
-    DashboardPage(),
-    ProfilePage(),
-    ListPage(), // atau page kamu
-  ];
+  final List<Widget> _pages = [BerandaPage(), ProfilePage(), ListPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +105,7 @@ class _MyAppState extends State<MyApp> {
             items: [
               SalomonBottomBarItem(
                 icon: const Icon(Icons.home_outlined),
-                title: const Text("Beranda"),
+                title: const Text("Home"),
                 selectedColor: Colors.black,
               ),
               SalomonBottomBarItem(
